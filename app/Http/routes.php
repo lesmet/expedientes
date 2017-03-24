@@ -11,7 +11,13 @@
 |
 */
 Route::get('/foo', function () {
+    $salida = shell_exec('git pull origin master');
+echo "<pre>$salida</pre>";
+     $exitCode = Artisan::call('migrate:refresh', [
+    '--force' => true,
+]);
     $exitCode = Artisan::call('config:cache');
+    
 });
 
 Route::get('/', function () {
