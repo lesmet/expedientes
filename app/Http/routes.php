@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+/*funciona*/
 Route::get('/foo', function () {
     $salida = shell_exec('git pull origin master');
 echo "<pre>$salida</pre>";
