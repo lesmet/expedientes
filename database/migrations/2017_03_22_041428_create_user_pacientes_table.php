@@ -13,7 +13,7 @@ class CreateUserPacientesTable extends Migration
     public function up()
     {
         Schema::create('pacientes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id') ;
             $table->string('name');
             $table->integer('cedula');
            $table->integer('id_Usuario')->unsigned();

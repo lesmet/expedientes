@@ -14,7 +14,7 @@ class CreateUserDoctorTable extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->increments('id');
-       $table->integer('id_Usuario')->unsigned();
+              $table->integer('id_Usuario')->unsigned();
        $table->integer('id_Doctor')->unique();
             $table->integer('cedula');
             $table->string('name');
